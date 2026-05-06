@@ -1,0 +1,75 @@
+{
+  "scenario_name": "scenario_30_two_cluster_geography_sweep_saturated_dose_response_gamma1",
+  "description": "Two-cluster geography spread sweep using saturated expected-ER DGP and linear dose-response sufficiency selector with gamma_true=1.",
+  "seeds": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016,
+    1017,
+    1018,
+    1019
+  ],
+  "n": 1000,
+  "r_true": 30.0,
+  "spillover_type": "expected_er_saturated_friend_sum",
+  "distance": {
+    "type": "two_cluster_square",
+    "map_size": 150.0,
+    "cluster_sd": 12.0
+  },
+  "distance_noise_sd": 0.0,
+  "network": {
+    "type": "erdos_renyi",
+    "p": 0.2
+  },
+  "treatment": {
+    "type": "bernoulli",
+    "pi": 0.5
+  },
+  "outcome": {
+    "alpha_true": 0.0,
+    "tau_true": 1.0,
+    "gamma_true": 1.0,
+    "sigma2": 1.0,
+    "beta_true": {}
+  },
+  "estimator": {
+    "radius_min": 4.0,
+    "radius_max": 50.0,
+    "radius_step": 2.0,
+    "band_radius_min": 2.0,
+    "band_radius_max": 50.0,
+    "band_radius_step": 2.0,
+    "B": 100,
+    "psi_dictionary": "annulus_treated_count",
+    "exposure_map": "treated_count",
+    "estimator_type": "dose_response_sufficiency"
+  },
+  "sweep": [
+    {
+      "path": "distance.cluster_sd",
+      "values": [
+        5.0,
+        10.0,
+        15.0,
+        20.0,
+        30.0
+      ]
+    }
+  ],
+  "saturation_lambda": 0.1
+}

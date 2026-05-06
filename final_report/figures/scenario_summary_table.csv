@@ -1,0 +1,12 @@
+scenario,min_mean_abs_error,max_mean_abs_error,best_median_r_hat,n_settings
+"Noise sweep, saturated DGP",0.5,8.0,30.0,5
+"ER p sweep, saturated DGP",5.1,16.4,30.0,7
+"r_true sweep, saturated DGP",4.0,12.6,25.0,5
+"n sweep, saturated DGP",5.0,17.6,30.0,6
+Distance measurement error,5.1,10.1,30.0,5
+Distance-decay network,5.9,8.5,26.0,6
+Covariate homophily network,7.2,10.8,30.0,6
+SBM community network,7.2,14.1,30.0,6
+Central-hub network,13.2,18.3,20.0,7
+Two-cluster geography,8.0,13.4,30.0,5
+Treatment probability,4.6,10.5,30.0,5
