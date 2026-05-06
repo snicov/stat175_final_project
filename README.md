@@ -6,7 +6,6 @@ This repository contains the simulation pipeline and final report for a STAT 175
 
 - `simulations/`: core simulation code, DGPs, estimators, and scenario runner.
 - `simulations/scenarios/`: one folder per scenario, including reproducible config files.
-- `final_report/`: LaTeX source and report figures.
 - `requirements.txt`: Python dependencies for running the simulations.
 
 Large generated simulation outputs are intentionally not tracked in GitHub. They can be regenerated from the scenario configs.
@@ -62,18 +61,6 @@ done
 ```
 
 Each run uses the seeds specified in its config file and writes aggregate and per-seed summaries to the scenario output directory.
-
-## Final Report
-
-The LaTeX report source is in `final_report/main.tex`. To compile:
-
-```bash
-cd final_report
-pdflatex main.tex
-pdflatex main.tex
-```
-
-The report figures in `final_report/figures/` are included in the repository.
 
 ## Notes on Outputs
 
